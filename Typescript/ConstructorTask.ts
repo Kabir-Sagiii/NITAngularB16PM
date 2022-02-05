@@ -1,0 +1,20 @@
+class Apple {
+    modelName:string
+    price:number 
+    customerName:string 
+     constructor(modelName:string,price:number,customerName:string) {
+          this.modelName = modelName
+          this.price = price 
+          this.customerName = customerName
+     }
+     printData():void {
+         console.log(this.modelName,this.price,this.customerName)
+     }
+
+}
+
+ var cust1=  new Apple("Iphone 7",50000,"Sneha")
+  cust1.printData()
+
+ var cust2 = new Apple("Iphone 13",100000,"Riya")
+ cust2.printData()
