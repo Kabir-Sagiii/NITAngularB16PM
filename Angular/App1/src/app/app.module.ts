@@ -11,6 +11,8 @@ import { HomeComponent } from './Components/Github-UI/home/home.component';
 import { SearchComponent } from './Components/Github-UI/search/search.component';
 import { ProfileComponent } from './Components/Github-UI/profile/profile.component';
 import { DetailsComponent } from './Components/Github-UI/details/details.component';
+import { NavComponent } from './Components/nav/nav.component';
+import { DatabindingComponent } from './Components/databinding/databinding.component';
 
 @NgModule({
   declarations: [
@@ -22,13 +24,15 @@ import { DetailsComponent } from './Components/Github-UI/details/details.compone
     HomeComponent,
     SearchComponent,
     ProfileComponent,
-    DetailsComponent
+    DetailsComponent,
+    NavComponent,
+    DatabindingComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [HomeComponent]
+  bootstrap: [DatabindingComponent]
 })
 export class AppModule { }
