@@ -1,0 +1,35 @@
+<div class="container my-5">
+  <div class="row">
+    <div class="col-6">
+      <div class="card">
+        <div class="card-header bg-danger text-white">
+          <h2>Switch to Dark Mode</h2>
+          <div class="form-check form-switch">
+            <input
+              [(ngModel)]="darkmode"
+              type="checkbox"
+              class="form-check-input"
+            />
+          </div>
+          <p>{{ darkmode }}</p>
+        </div>
+
+        <div
+          class="card-body"
+          [class.bg-dark]="darkmode"
+          [class.text-white]="darkmode"
+        >
+          <h3>Angular</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+            quaerat illum eum repudiandae officiis, at, dignissimos ut ratione
+            architecto esse error modi? Ullam nemo fugiat atque dicta sit beatae
+            odit aliquid doloremque nobis ut labore tenetur in, modi expedita
+            molestias. Impedit accusantium earum veniam veritatis dolorem quia
+            debitis ab quasi?
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

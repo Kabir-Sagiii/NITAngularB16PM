@@ -1,0 +1,40 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        box-shadow: 0 0 10px black;
+        width: 500px;
+        padding: 50px;
+        text-align: center;
+        margin: 100px auto;
+      }
+    </style>
+    <script>
+      function fn() {
+        var inputRef = document.getElementById("i1");
+        var pRef = document.getElementById("p1");
+
+        // console.log(inputRef.getAttribute("value"));
+        // console.log(inputRef.value);
+        pRef.innerText = inputRef.value;
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <input
+        id="i1"
+        type="text"
+        placeholder="Enter text"
+        onkeydown="fn()"
+        value="NIT"
+      />
+
+      <p id="p1" innerText="">cdsjhvcdjs</p>
+    </div>
+  </body>
+</html>

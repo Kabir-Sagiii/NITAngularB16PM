@@ -13,6 +13,11 @@ import { ProfileComponent } from './Components/Github-UI/profile/profile.compone
 import { DetailsComponent } from './Components/Github-UI/details/details.component';
 import { NavComponent } from './Components/nav/nav.component';
 import { DatabindingComponent } from './Components/databinding/databinding.component';
+import { InterpolationComponent } from './Components/interpolation/interpolation.component';
+import { ShowhidepasswordComponent } from './Components/showhidepassword/showhidepassword.component';
+import { TwowayComponent } from './Components/twoway/twoway.component';
+import {FormsModule} from '@angular/forms';
+import { DarkmodeComponent } from './Components/darkmode/darkmode.component'
 
 @NgModule({
   declarations: [
@@ -26,13 +31,18 @@ import { DatabindingComponent } from './Components/databinding/databinding.compo
     ProfileComponent,
     DetailsComponent,
     NavComponent,
-    DatabindingComponent
+    DatabindingComponent,
+    InterpolationComponent,
+    ShowhidepasswordComponent,
+    TwowayComponent,
+    DarkmodeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
-  bootstrap: [DatabindingComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

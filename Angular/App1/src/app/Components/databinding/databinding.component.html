@@ -1,19 +1,57 @@
 <app-nav></app-nav>
 
-   <div class="container mt-5">
-       <div class="row">
-           <div class="col-2">
-               <img src="https://static.toiimg.com/thumb/resizemode-4,msid-82105782,width-1070/82105782.jpg" class="img-fluid" />
-           </div>
-           <div class="col-4">
-               <dl>
-                   <dt>Product Name</dt>
-                   <dd>{{mobileProduct.name}}</dd>
-                   <dt> Product Price</dt>
-                   <dd>{{mobileProduct.price}}</dd>
-                   <dt>Product stock</dt>
-                   <dd>{{(mobileProduct.stock) ? "Available" : "Out of Stock"}}</dd>
-               </dl>
-           </div>
-       </div>
-   </div>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-2">
+      <img [src]="mobileProduct.image" class="img-fluid" />
+    </div>
+    <div class="col-4">
+      <dl>
+        <dt>Product Name</dt>
+        <dd>{{ mobileProduct.name }}</dd>
+        <dt>Product Price</dt>
+        <dd>{{ mobileProduct.price }}</dd>
+        <dt>Product stock</dt>
+        <dd>{{ mobileProduct.stock ? "Available" : "Out of Stock" }}</dd>
+        <!-- <dt>Total Amount</dt>
+        <dd>{{ 90000 * 7 }}</dd> -->
+        <dt>Total Amount</dt>
+        <dd>{{ getTotal() }}</dd>
+
+        <dt>
+          Enter Name : <input type="text" (keydown)="changeTextValue($event)" />
+        </dt>
+        <dd></dd>
+
+        <dt>Value of Textbox</dt>
+        <dd>{{ textBoxValue }}</dd>
+      </dl>
+    </div>
+  </div>
+</div>
+<!-- <div class="container">
+  <div class="row">
+    <div class="col">
+      <table
+        [border]="borderTable"
+        [width]="widthTable"
+        [attr.height]="heightTable"
+      >
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>CITY</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>101</td>
+            <td>NIT</td>
+            <td>Hyderabad</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div> -->

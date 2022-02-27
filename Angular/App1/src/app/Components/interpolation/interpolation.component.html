@@ -1,0 +1,26 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-6">
+      <div class="card">
+        <div class="card-header bg-primary text-white">
+          <h2>Interpolation</h2>
+        </div>
+        <div class="card-body">
+          <form>
+            <textarea
+              (keydown)="getData($event)"
+              rows="4"
+              class="form-control"
+              maxlength="100"
+            >
+            </textarea>
+            <p>{{ textAreaData }}</p>
+          </form>
+        </div>
+        <div class="card-footer">
+          <p class="lead">Count : {{ count - textAreaData.length }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
