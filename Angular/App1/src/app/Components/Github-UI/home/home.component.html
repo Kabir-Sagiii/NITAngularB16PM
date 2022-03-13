@@ -1,14 +1,14 @@
-<app-nav></app-nav>
-<div class="container  mt-5">
+<!-- <app-nav></app-nav> -->
+<div class="container mt-5">
   <div class="row">
     <div class="col">
-      <app-search></app-search>
+      <app-search (userGithubDetails)="getDataFromChild($event)"></app-search>
     </div>
   </div>
 
   <div class="row">
     <div class="col-4">
-      <app-profile></app-profile>
+      <app-profile [parentData]="userGithubDetails"></app-profile>
     </div>
 
     <div class="col-8">

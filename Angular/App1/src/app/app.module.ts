@@ -17,7 +17,20 @@ import { InterpolationComponent } from './Components/interpolation/interpolation
 import { ShowhidepasswordComponent } from './Components/showhidepassword/showhidepassword.component';
 import { TwowayComponent } from './Components/twoway/twoway.component';
 import {FormsModule} from '@angular/forms';
-import { DarkmodeComponent } from './Components/darkmode/darkmode.component'
+import { DarkmodeComponent } from './Components/darkmode/darkmode.component';
+import { NgifComponent } from './Components/ngif/ngif.component';
+import { NgforComponent } from './Components/ngfor/ngfor.component';
+import { NgforfetchComponent } from './Components/ngforfetch/ngforfetch.component';
+import { NgswitchComponent } from './Components/ngswitch/ngswitch.component';
+import { NgclassComponent } from './Components/ngclass/ngclass.component';
+import { NgstyleComponent } from './Components/ngstyle/ngstyle.component';
+import { InputdecoratorComponent } from './Components/inputdecorator/inputdecorator.component';
+import { IdparentComponent } from './Components/idparent/idparent.component';
+import { IdchildComponent } from './Components/idchild/idchild.component';
+import { ParentDecoratorComponent } from './Components/OutputDecorator/parent-decorator/parent-decorator.component';
+import { ChildtDecoratorComponent } from './Components/OutputDecorator/childt-decorator/childt-decorator.component';
+import { User1Component } from './Components/user1/user1.component';
+import { User2Component } from './Components/user2/user2.component'
 
 @NgModule({
   declarations: [
@@ -35,7 +48,20 @@ import { DarkmodeComponent } from './Components/darkmode/darkmode.component'
     InterpolationComponent,
     ShowhidepasswordComponent,
     TwowayComponent,
-    DarkmodeComponent
+    DarkmodeComponent,
+    NgifComponent,
+    NgforComponent,
+    NgforfetchComponent,
+    NgswitchComponent,
+    NgclassComponent,
+    NgstyleComponent,
+    InputdecoratorComponent,
+    IdparentComponent,
+    IdchildComponent,
+    ParentDecoratorComponent,
+    ChildtDecoratorComponent,
+    User1Component,
+    User2Component
   ],
   imports: [
     BrowserModule,

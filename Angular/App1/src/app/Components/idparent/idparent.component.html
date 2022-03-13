@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header bg-dark text-white">
+          <h3>Parent Comp</h3>
+        </div>
+
+        <div class="card-body">
+          <input
+            type="text"
+            placeholder="Enter Name"
+            class="form-control"
+            ngModel
+            #inputRef="ngModel"
+          />
+          <button
+            class="btn mt-2 btn-primary"
+            (click)="sendDataToChild(inputRef)"
+          >
+            Send Data to Child
+          </button>
+        </div>
+        <div class="card-footer">
+          <app-idchild [childData]="parentData"></app-idchild>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

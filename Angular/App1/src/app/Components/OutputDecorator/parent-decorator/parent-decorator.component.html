@@ -1,0 +1,21 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-6">
+      <div class="card">
+        <div class="card-header bg-dark text-white">
+          <h3>Parent Component</h3>
+        </div>
+
+        <div class="card-body">
+          <app-childt-decorator
+            (customEvent)="getDataFromChild($event)"
+          ></app-childt-decorator>
+        </div>
+
+        <div class="card-footer">
+          <p class="lead text-danger">{{ dataFromChild }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

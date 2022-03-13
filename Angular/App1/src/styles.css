@@ -8,3 +8,6 @@
 .bg-dark {
   background: linear-gradient(45deg, rgb(37, 19, 12), black);
 }
+.bg-info {
+  background: linear-gradient(45deg, rgb(12, 17, 37), black);
+}

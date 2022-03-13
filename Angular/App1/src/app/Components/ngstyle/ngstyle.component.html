@@ -1,0 +1,9 @@
+<div
+  class="container mt-5"
+  (mousemove)="getStyledCircleComp($event)"
+  (mouseleave)="changeStyle()"
+  [ngStyle]="divContainerStyle"
+>
+  Box1
+</div>
+<div class="circle" [ngStyle]="circleStyle"></div>

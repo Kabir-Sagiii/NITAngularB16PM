@@ -1,28 +1,32 @@
 <div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header bg-primary text-white">
+          <h2>Github Search</h2>
+        </div>
 
-      <div class="row">
-          <div class="col">
-
-               <div class="card">
-                   <div class="card-header bg-primary text-white">
-                       <h2>Github Search</h2>
-                   </div>
-
-                   <div class="card-body">
-                          <div class="row">
-                              <div class="col-8">
-                                   <div class="form-group d-flex ">
-                               <input class="form-control" type="text" placeholder="Enter Githubusername"/>
-                           <button class="btn btn-outline-primary mx-3 px-5">Search</button>
-                            </div>
-                              </div>
-                          </div>
-                          
-
-                   </div>
-               </div>
-
-
+        <div class="card-body">
+          <div class="row">
+            <div class="col-8">
+              <div class="form-group d-flex">
+                <input
+                  [(ngModel)]="userName"
+                  class="form-control"
+                  type="text"
+                  placeholder="Enter Githubusername"
+                />
+                <button
+                  class="btn btn-outline-primary mx-3 px-5"
+                  (click)="getUserDetail()"
+                >
+                  Search
+                </button>
+              </div>
+            </div>
           </div>
+        </div>
       </div>
+    </div>
+  </div>
 </div>

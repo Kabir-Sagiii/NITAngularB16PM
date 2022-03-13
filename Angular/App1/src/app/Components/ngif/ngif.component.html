@@ -1,0 +1,154 @@
+<!-- <div class="container mt-5">
+  <div class="row">
+    <p class="text-primary lead">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem excepturi
+      perferendis similique exercitationem assumenda asperiores impedit
+      repellendus voluptatem officiis laborum, repellat beatae a maxime. Rem
+      possimus soluta modi libero ratione fugit aut consectetur labore autem.
+      Aperiam consequuntur optio autem odit provident id accusamus cum? Dolores
+      hic sit eum, iure quam similique quasi eligendi reprehenderit. Omnis id
+      quidem cumque esse in.
+    </p>
+  </div>
+
+  <div class="row mt-5">
+    <div class="col-6">
+      <div class="card">
+        <div class="card-header bg-success">
+          <h4 class="text-white">ngIf Directive</h4>
+        </div>
+        <div class="card-body">
+          <dl>
+            <dt>Mobile Name</dt>
+            <dd>{{ mobileBrand.mobilename }}</dd>
+            <dt>Mobile Price</dt>
+            <dd>{{ mobileBrand.price }}</dd>
+            <dt *ngIf="switchOn">Hide Preview</dt>
+            <dt *ngIf="!switchOn">Show Preview</dt>
+            <dd>
+              <div class="form-check form-switch">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  [(ngModel)]="switchOn"
+                />
+              </div>
+            </dd>
+            <dd *ngIf="switchOn">
+              <img [src]="mobileBrand.image" width="200" height="200" />
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- <div class="container mt-5">
+  <div class="row mt-5">
+    <div class="col">
+      <div class="card">
+        <div class="card-header bg-info text-white">
+          <h2>ngIf Directive</h2>
+        </div>
+
+        <div class="card-body">
+          <div class="row">
+            <div class="col-4">
+              <div class="form-check">
+                <input
+                  [(ngModel)]="carVisible"
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  Car
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  [(ngModel)]="bikeVisible"
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  Bike
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  name="unchecked"
+                  class="form-check-input"
+                  type="checkbox"
+                  (change)="changebicycleStatus($event)"
+                  [value]="bicycleVisible"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  Bicycle
+                </label>
+              </div>
+            </div>
+            <div class="col-8">
+              <div *ngIf="carVisible" class="card-body bg-dark text-white">
+                <h2 class="text-white">My Car</h2>
+              </div>
+              <div *ngIf="bikeVisible" class="card-body bg-primary text-white">
+                <h2 class="text-white">My Bike</h2>
+              </div>
+              <div
+                *ngIf="bicycleVisible"
+                class="card-body bg-secondary text-white"
+              >
+                <h2 class="text-white">My Bicycle</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h2>NgIF with then and else block</h2>
+    </div>
+  </div>
+
+  <div class="row mt-5">
+    <div class="col-6">
+      <div class="card">
+        <div class="card-header bg-dark text-white">
+          <input
+            [(ngModel)]="carImage"
+            type="checkbox"
+            class="form-check-input"
+          />
+          Show Bike
+        </div>
+        <div class="card-body" *ngIf="carImage; then bike; else car"></div>
+
+        <ng-template #bike>
+          <img
+            src="https://images.pexels.com/photos/2393816/pexels-photo-2393816.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+            height="100%"
+            width="100%"
+          />
+        </ng-template>
+
+        <ng-template #car>
+          <img
+            src="https://images.pexels.com/photos/1149137/pexels-photo-1149137.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+            height="100%"
+            width="100%"
+          />
+        </ng-template>
+
+        <div></div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,93 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col">
+      <p class="lead text-primary">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
+        laudantium provident iusto harum debitis repudiandae culpa sed quaerat
+        deserunt corporis fuga iste odio odit soluta animi sequi, possimus
+        saepe, nisi nemo, eaque nesciunt! Iure possimus voluptatem aliquam,
+        quidem ea odit vel culpa dolorem quo corrupti eaque at eveniet harum ad
+        sunt, repellat adipisci excepturi accusantium suscipit autem? Odio,
+        atque quos vitae obcaecati iusto commodi enim maiores nostrum impedit
+        temporibus facere.
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-4">
+      <button class="btn btn-outline-primary" (click)="getUserData()">
+        Get Users
+      </button>
+    </div>
+  </div>
+
+  <div class="row mt-3" *ngIf="showTable">
+    <div class="col-1">
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="flexRadioDefault"
+          id="flexRadioDefault1"
+          checked
+          (change)="filterAllData()"
+        />
+        <label class="form-check-label" for="flexRadioDefault1"> ALL </label>
+      </div>
+    </div>
+    <div class="col-1">
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="flexRadioDefault"
+          id="flexRadioDefault2"
+          (change)="filterMaleData()"
+        />
+        <label class="form-check-label" for="flexRadioDefault2"> Male </label>
+      </div>
+    </div>
+    <div class="col-1">
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="flexRadioDefault"
+          id="flexRadioDefault2"
+          (change)="filterFemaleData()"
+        />
+        <label class="form-check-label" for="flexRadioDefault2"> Female </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-5" *ngIf="showTable">
+    <div class="col">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>IMAGE</th>
+            <th>NAME</th>
+            <th>EMAIL</th>
+            <th>GENDER</th>
+            <th>CITY</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of filterUserData">
+            <td>
+              <img [src]="user.picture.medium" class="img-fluid" />
+            </td>
+            <td>{{ user.name.first }} {{ user.name.last }}</td>
+            <td>
+              {{ user.email }}
+            </td>
+            <td>{{ user.gender }}</td>
+            <td>{{ user.location.city }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

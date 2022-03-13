@@ -1,0 +1,41 @@
+<!-- <div class="container mt-5">
+  <h2>Mobile List</h2>
+  <ol>
+    <li *ngFor="let mobile of mobiles">
+      {{ mobile }}
+    </li>
+  </ol>
+</div> -->
+
+<!-- <div class="container mt-5">
+  <h2>List of Products</h2>
+  <select class="form-select">
+    <option *ngFor="let m of mobiles">
+      {{ m }}
+    </option>
+  </select>
+</div> -->
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-6">
+      <div class="card">
+        <div class="card-header bg-dark text-white">
+          <h3>List of Mobile Brands</h3>
+        </div>
+        <div class="card-body">
+          <ol>
+            <li *ngFor="let mobile of mobileBrand">
+              {{ mobile.brandName }}
+              <ul>
+                <li *ngFor="let model of mobile.models">
+                  {{ model }}
+                </li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

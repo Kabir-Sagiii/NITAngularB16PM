@@ -1,0 +1,77 @@
+<div class="container mt-3">
+  <div class="row">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum maiores
+      voluptatem, cupiditate distinctio placeat consectetur nemo deserunt
+      blanditiis molestias! Provident perspiciatis quo vero, blanditiis
+      veritatis tempora eos rem minima, quis quaerat accusantium, deleniti quos?
+      Nobis officiis blanditiis eos libero. Id reiciendis totam similique amet!
+      Sed nam praesentium repellendus ex ea enim, consequuntur ab natus veniam
+      sapiente? Exercitationem, officia? Esse, cum.
+    </p>
+    <div class="col-4">
+      <button (click)="getDataFromServer()" class="btn btn-info">
+        Get Data
+      </button>
+    </div>
+  </div>
+  <div class="row mt-5" *ngIf="showContainers">
+    <div class="col">
+      <div class="btn-toolbar">
+        <div class="btn-group">
+          <button
+            class="btn btn-outline-primary"
+            (click)="updateStatus('personalInfo')"
+          >
+            Personal Info
+          </button>
+          <button
+            class="btn btn-outline-primary"
+            (click)="updateStatus('addressInfo')"
+          >
+            Address Info
+          </button>
+          <button
+            class="btn btn-outline-primary"
+            (click)="updateStatus('loginInfo')"
+          >
+            Login Info
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="showContainers">
+    <div class="col">
+      <div [ngSwitch]="userStatus">
+        <div *ngSwitchCase="'personalInfo'">
+          <dl>
+            <dt>NAME</dt>
+            <dd>{{ userData.name.first }}</dd>
+            <dt>EMAIL</dt>
+            <dd>{{ userData.email }}</dd>
+          </dl>
+        </div>
+
+        <div *ngSwitchCase="'addressInfo'">
+          <dl>
+            <dt>City</dt>
+            <dd>{{ userData.location.city }}</dd>
+            <dt>State</dt>
+            <dd>{{ userData.location.state }}</dd>
+          </dl>
+        </div>
+
+        <div *ngSwitchCase="'loginInfo'">
+          <dl>
+            <dt>ID</dt>
+            <dd>{{ userData.login.uuid }}</dd>
+            <dt>USERNAME</dt>
+            <dd>{{ userData.login.username }}</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

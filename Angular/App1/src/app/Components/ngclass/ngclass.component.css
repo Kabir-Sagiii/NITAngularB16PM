@@ -1,0 +1,12 @@
+.validationApplied {
+  border: 2px solid green;
+}
+
+.validationNotApplied {
+  border: 2px solid red;
+}
+
+.darkmode {
+  background-color: black;
+  color: white;
+}
