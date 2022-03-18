@@ -1,0 +1,115 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-4 mx-auto">
+      <div class="card">
+        <div class="card-header bg-dark text-white">
+          <h3>Register User</h3>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="formRegister" (submit)="register()">
+            <dl>
+              <dt>User Name</dt>
+              <dd>
+                <input
+                  [ngClass]="{
+                    invalidField:
+                      submitted && formRegister.controls['uname'].errors
+                  }"
+                  type="text"
+                  class="form-control"
+                  formControlName="uname"
+                />
+              </dd>
+              <dd
+                class="text-danger"
+                *ngIf="submitted && formRegister.controls['uname'].errors"
+              >
+                <span *ngIf="formRegister.controls['uname'].errors['required']"
+                  >Name is Required</span
+                >
+                <span *ngIf="formRegister.controls['uname'].errors['minlength']"
+                  >Mini 5 char are Required</span
+                >
+                <span *ngIf="formRegister.controls['uname'].errors['maxlength']"
+                  >Max 10 chars are allowed</span
+                >
+              </dd>
+              <dt>Phone</dt>
+              <dd>
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="phone"
+                  [ngClass]="{
+                    invalidField:
+                      submitted && formRegister.controls['phone'].errors
+                  }"
+                />
+              </dd>
+              <dd
+                class="text-danger"
+                *ngIf="submitted && formRegister.controls['phone'].errors"
+              >
+                <span *ngIf="formRegister.controls['phone'].errors['required']"
+                  >Phone No is Required</span
+                >
+                <span *ngIf="formRegister.controls['phone'].errors['pattern']"
+                  >Enter Proper Phone Number</span
+                >
+              </dd>
+              <dt>Email</dt>
+              <dd>
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="email"
+                  [ngClass]="{
+                    invalidField:
+                      submitted && formRegister.controls['email'].errors
+                  }"
+                />
+              </dd>
+              <dd
+                class="text-danger"
+                *ngIf="submitted && formRegister.controls['email'].errors"
+              >
+                <span *ngIf="formRegister.controls['email'].errors['required']"
+                  >Email is Required</span
+                >
+                <span *ngIf="formRegister.controls['email'].errors['email']"
+                  >Valid Email is Required</span
+                >
+              </dd>
+            </dl>
+            <h4>
+              Upload File
+              <button
+                type="button"
+                class="btn btn-link"
+                (click)="addNewControl()"
+              >
+                Add File
+              </button>
+            </h4>
+            <div
+              *ngFor="let control of NewControl.controls; let i = index"
+              class="mt-3"
+            >
+              <input type="file" class="form-control" formControlName="i" />
+              <button
+                type="button"
+                class="btn btn-link"
+                (click)="removeControl(i)"
+              >
+                Remove
+              </button>
+            </div>
+            <div class="text-center mt-3">
+              <button class="btn btn-outline-primary px-4">Register</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

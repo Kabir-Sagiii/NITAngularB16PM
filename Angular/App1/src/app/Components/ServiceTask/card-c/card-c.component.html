@@ -1,0 +1,34 @@
+<div class="container mt-5">
+  <div class="row">
+    <p class="lead">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quae
+      omnis, ab quidem aliquam exercitationem doloremque esse nemo? Debitis
+      totam at recusandae, ipsum nam quae nulla a ut quia temporibus quisquam
+      sit rem iste libero, obcaecati porro officia tempora doloribus
+      voluptatibus possimus, velit numquam dolorem consectetur delectus.
+      Inventore provident voluptatum eum sequi fuga expedita suscipit!
+      Accusantium aspernatur atque esse quidem.
+    </p>
+  </div>
+  <div class="row">
+    <div class="col-4">
+      <button class="btn btn-outline-primary" (click)="CallService()">
+        Display In Card Format
+      </button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4" *ngFor="let emp of empDetails">
+      <div class="card">
+        <div class="card-header">
+          <img [src]="emp.picture.medium" width="100%" height="100%" />
+        </div>
+        <div class="card-body">
+          <h4>{{ emp.name.first }} {{ emp.name.last }}</h4>
+          <p class="lead">{{ emp.email }}</p>
+          <button class="btn btn-primary px-5">Profile</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

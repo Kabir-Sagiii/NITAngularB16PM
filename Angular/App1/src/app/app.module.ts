@@ -16,7 +16,7 @@ import { DatabindingComponent } from './Components/databinding/databinding.compo
 import { InterpolationComponent } from './Components/interpolation/interpolation.component';
 import { ShowhidepasswordComponent } from './Components/showhidepassword/showhidepassword.component';
 import { TwowayComponent } from './Components/twoway/twoway.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { DarkmodeComponent } from './Components/darkmode/darkmode.component';
 import { NgifComponent } from './Components/ngif/ngif.component';
 import { NgforComponent } from './Components/ngfor/ngfor.component';
@@ -30,7 +30,14 @@ import { IdchildComponent } from './Components/idchild/idchild.component';
 import { ParentDecoratorComponent } from './Components/OutputDecorator/parent-decorator/parent-decorator.component';
 import { ChildtDecoratorComponent } from './Components/OutputDecorator/childt-decorator/childt-decorator.component';
 import { User1Component } from './Components/user1/user1.component';
-import { User2Component } from './Components/user2/user2.component'
+import { User2Component } from './Components/user2/user2.component';
+import { TableCComponent } from './Components/ServiceTask/table-c/table-c.component';
+import { CardCComponent } from './Components/ServiceTask/card-c/card-c.component';
+import { TemplateformComponent } from './Components/templateform/templateform.component';
+import { ReactiveformComponent } from './Components/reactiveform/reactiveform.component';
+import { FormbuilderCComponent } from './Components/formbuilder-c/formbuilder-c.component';
+import { ProductListComponent } from './Shopping-Cart/product-list/product-list.component';
+
 
 @NgModule({
   declarations: [
@@ -61,12 +68,20 @@ import { User2Component } from './Components/user2/user2.component'
     ParentDecoratorComponent,
     ChildtDecoratorComponent,
     User1Component,
-    User2Component
+    User2Component,
+    TableCComponent,
+    CardCComponent,
+    TemplateformComponent,
+    ReactiveformComponent,
+    FormbuilderCComponent,
+    ProductListComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

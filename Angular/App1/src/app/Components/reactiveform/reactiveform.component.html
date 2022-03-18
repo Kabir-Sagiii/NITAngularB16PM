@@ -1,0 +1,81 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-4">
+      <div class="card">
+        <div class="card-header bg-dark text-white">
+          <h3>Reactive Form</h3>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="formRegister">
+            <div class="mt-2">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter Name"
+                formControlName="Name"
+              />
+            </div>
+            <div class="mt-2">
+              <input
+                type="password"
+                class="form-control"
+                placeholder="Enter Password"
+                formControlName="Password"
+              />
+            </div>
+            <div class="mt-2">
+              <input
+                type="email"
+                class="form-control"
+                placeholder="Enter Email"
+                formControlName="Email"
+              />
+            </div>
+            <div class="mt-2">
+              <input type="file" class="form-control" />
+              <button class="btn btn-link">Add File</button>
+            </div>
+            <button
+              type="button"
+              (click)="getFormData()"
+              class="btn mt-2 w-100 btn-primary"
+            >
+              Register
+            </button>
+            <button
+              type="button"
+              (click)="ResetForm()"
+              class="btn mt-2 w-100 btn-success"
+            >
+              Reset
+            </button>
+            <button
+              type="button"
+              (click)="SetForm()"
+              class="btn mt-2 w-100 btn-danger"
+            >
+              Setvalue to Form
+            </button>
+            <button
+              type="button"
+              (click)="PatchForm()"
+              class="btn mt-2 w-100 btn-secondary"
+            >
+              Patchvalue to Form
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <dl>
+        <dt>Name</dt>
+        <dd>{{ formRegister.value.Name }}</dd>
+        <dt>Password</dt>
+        <dd>{{ formRegister.value.Password }}</dd>
+        <dt>Email</dt>
+        <dd>{{ formRegister.value.Email }}</dd>
+      </dl>
+    </div>
+  </div>
+</div>

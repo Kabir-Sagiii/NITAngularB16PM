@@ -1,0 +1,58 @@
+<div class="container mt-5">
+  <div class="row">
+    <p class="lead">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quae
+      omnis, ab quidem aliquam exercitationem doloremque esse nemo? Debitis
+      totam at recusandae, ipsum nam quae nulla a ut quia temporibus quisquam
+      sit rem iste libero, obcaecati porro officia tempora doloribus
+      voluptatibus possimus, velit numquam dolorem consectetur delectus.
+      Inventore provident voluptatum eum sequi fuga expedita suscipit!
+      Accusantium aspernatur atque esse quidem.
+    </p>
+  </div>
+  <div class="row">
+    <div class="col-4">
+      <button class="btn btn-outline-primary" (click)="CallService()">
+        Display In Table Format
+      </button>
+    </div>
+    <div class="col-4">
+      <button class="btn btn-outline-danger" (click)="HideTable()">
+        Hide Table
+      </button>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <table class="table table-hover" *ngIf="!(empDetails.length === 0)">
+      <thead>
+        <tr>
+          <th>Image</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Country</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let emp of empDetails">
+          <td>
+            <img [src]="emp.picture.medium" width="50" height="50" />
+          </td>
+          <td>
+            {{ emp.name.first }}
+          </td>
+          <td>
+            {{ emp.name.last }}
+          </td>
+          <td>
+            {{ emp.email }}
+          </td>
+          <td>
+            {{ emp.location.country }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

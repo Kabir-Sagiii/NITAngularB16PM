@@ -1,0 +1,74 @@
+<div class="container mt-5">
+  <h2>Template Driven Form</h2>
+
+  <form
+    #regForm="ngForm"
+    class="w-50 mt-3 p-4"
+    [ngClass]="{ valid: regForm.valid, invalid: regForm.invalid }"
+  >
+    <dl>
+      <dt>User Name</dt>
+      <dd>
+        <input
+          required
+          minlength="5"
+          type="text"
+          name="username"
+          ngModel
+          #username="ngModel"
+          class="form-control"
+        />
+      </dd>
+      <dd class="text-danger" *ngIf="!username.untouched">
+        <span *ngIf="username.errors?.['required']">Enter User Name</span>
+        <span *ngIf="username.errors?.['minlength']"
+          >Enter Minimum 4 Charc</span
+        >
+      </dd>
+      <dt>Phone No</dt>
+      <dd>
+        <input
+          type="text"
+          name="phone"
+          ngModel
+          #phone="ngModel"
+          class="form-control"
+        />
+      </dd>
+      <dt>
+        <select (change)="getError($event)" class="form-select my-3">
+          <option value="nocity">Select The city</option>
+          <option value="delhi">Delhi</option>
+          <option value="hyd">Hyd</option>
+        </select>
+      </dt>
+      <dd class="text-danger">{{ selectErrorMsg }}</dd>
+
+      <button class="btn w-100 btn-primary">Register</button>
+      <button [disabled]="regForm.pristine" class="btn w-100 btn-primary mt-3">
+        Save
+      </button>
+    </dl>
+
+    <!-- <dl>
+      <dt>User Name:</dt>
+      <dd>{{ username.value }}</dd>
+      <dt>Phone No:</dt>
+      <dd>{{ phone.value }}</dd>
+    </dl> -->
+    <dl>
+      <dt>Pristine</dt>
+      <dd>{{ regForm.pristine }}</dd>
+      <dt>Dirty</dt>
+      <dd>{{ regForm.dirty }}</dd>
+      <dt>Valid</dt>
+      <dd>{{ regForm.valid }}</dd>
+      <dt>Invalid</dt>
+      <dd>{{ regForm.invalid }}</dd>
+      <dt>Touched</dt>
+      <dd>{{ username.touched }}</dd>
+      <dt>UnTouched</dt>
+      <dd>{{ username.untouched }}</dd>
+    </dl>
+  </form>
+</div>
