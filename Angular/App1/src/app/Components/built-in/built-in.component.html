@@ -1,0 +1,60 @@
+<div class="container mt-5">
+  <div class="row">
+    <h1>{{ Products.bName | uppercase }} {{ "Brand" | uppercase }}</h1>
+    <p class="lead">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae
+      consequuntur beatae rerum rem laudantium ipsam numquam sint inventore
+      ullam ratione suscipit, nam aliquid at delectus id quos sapiente veniam,
+      non labore doloremque! Temporibus quo aspernatur error eum perspiciatis
+      unde eaque, quia sed nostrum tempora iure velit, minima magni. Neque eius
+      cum assumenda necessitatibus quia ab illum praesentium, adipisci quod
+      harum voluptas dolores nobis quibusdam soluta earum suscipit eos. Dolores,
+      at?
+    </p>
+    <h2>
+      <dl>
+        <dt>Product Model</dt>
+        <dd>{{ Products.pName | lowercase }}</dd>
+        <dt>Product Price</dt>
+        <dd>{{ Products.price | currency: "INR" }}</dd>
+        <dt>Product ManfacturedDate</dt>
+        <dd>{{ Products.mDate | date: "dd-MMMM-yyyy" }}</dd>
+      </dl>
+    </h2>
+  </div>
+  <div class="row mt-3">
+    <h2>JSON PIPE</h2>
+    <h3>{{ Products | json }}</h3>
+  </div>
+  <div class="row text-left mb-5">
+    <div class="col mb-5">
+      <h2>{{ "Mobile Brands" | uppercase }}</h2>
+      <ol>
+        <li *ngFor="let mobile of mobileProducts | slice: 2">
+          {{ mobile }}
+        </li>
+      </ol>
+      <ul>
+        <li *ngFor="let product of mobileProducts | mysorting: false">
+          {{ product }}
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row mb-5">
+    <div class="col">
+      <table class="table table-hover">
+        <tr>
+          <th>NAME</th>
+          <th>CITY</th>
+          <th>STATUS MESSAGE</th>
+        </tr>
+        <tr *ngFor="let newProduct of newProducts">
+          <td>{{ newProduct.name }}</td>
+          <td>{{ newProduct.city }}</td>
+          <td>{{ newProduct.city | i18nSelect: statusMessage }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

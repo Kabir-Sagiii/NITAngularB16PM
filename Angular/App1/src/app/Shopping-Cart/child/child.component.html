@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header bg-success text-white">
+          <h3>Child Component</h3>
+        </div>
+
+        <div class="card-body">
+          <div class="row">
+            <p>Parent Data: {{ data }}</p>
+          </div>
+          <div class="row text-danger">
+            <ng-content> </ng-content>
+          </div>
+        </div>
+        <div class="card-footer">
+          <p>{{ childData }}</p>
+          <button class="btn btn-warning" (click)="changeData()">
+            Change Data
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

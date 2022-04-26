@@ -1,0 +1,32 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="row">
+          <div class="col-4">
+            <img
+              [src]="filterUser[0].picture.medium"
+              height="100%"
+              width="100%"
+            />
+          </div>
+          <div class="col-8 mt-3">
+            <dl>
+              <dt>NAME</dt>
+              <dd>
+                {{ filterUser[0].name.title }} {{ filterUser[0].name.firtst }}
+                {{ filterUser[0].name.last }}
+              </dd>
+              <dt>GENDER</dt>
+              <dd>
+                {{ filterUser[0].gender }}
+              </dd>
+              <dt>CITY</dt>
+              <dd>{{ filterUser[0].location.city }}</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

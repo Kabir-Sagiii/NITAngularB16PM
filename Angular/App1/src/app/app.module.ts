@@ -37,7 +37,24 @@ import { TemplateformComponent } from './Components/templateform/templateform.co
 import { ReactiveformComponent } from './Components/reactiveform/reactiveform.component';
 import { FormbuilderCComponent } from './Components/formbuilder-c/formbuilder-c.component';
 import { ProductListComponent } from './Shopping-Cart/product-list/product-list.component';
-
+import { CategoryComponent } from './Shopping-Cart/category/category.component';
+import { ElectronicsComponent } from './Shopping-Cart/electronics/electronics.component';
+import { JewelaryComponent } from './Shopping-Cart/jewelary/jewelary.component';
+import {HttpClientModule} from '@angular/common/http';
+import { PagenotfoundComponent } from './Shopping-Cart/pagenotfound/pagenotfound.component';
+import { LifecylehooksComponent } from './Components/lifecylehooks/lifecylehooks.component';
+import { ParentComponent } from './Shopping-Cart/parent/parent.component';
+import { ChildComponent } from './Shopping-Cart/child/child.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AngularMaterialExComponent } from './Components/angular-material-ex/angular-material-ex.component'
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon'
+import {MatCardModule} from '@angular/material/card'
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { BuiltInComponent } from './Components/built-in/built-in.component';
+import { MysortingPipe } from './Pipes/mysorting.pipe';
+import { UsersProfileCComponent } from './Components/users-profile-c/users-profile-c.component';
+import { UDetailsCComponent } from './Components/udetails-c/udetails-c.component';
 
 @NgModule({
   declarations: [
@@ -75,13 +92,31 @@ import { ProductListComponent } from './Shopping-Cart/product-list/product-list.
     ReactiveformComponent,
     FormbuilderCComponent,
     ProductListComponent,
+    CategoryComponent,
+    ElectronicsComponent,
+    JewelaryComponent,
+    PagenotfoundComponent,
+    LifecylehooksComponent,
+    ParentComponent,
+    ChildComponent,
+    AngularMaterialExComponent,
+    BuiltInComponent,
+    MysortingPipe,
+    UsersProfileCComponent,
+    UDetailsCComponent,
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatIconModule,
+    MatCardModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h2>All Users Profile Data</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+        architecto perspiciatis nulla totam voluptate, cumque iste autem veniam
+        repellendus? Sequi nemo consequuntur provident minus explicabo in
+        adipisci voluptatibus nulla, quo hic iste officiis facilis amet natus
+        laudantium exercitationem sapiente sunt rem molestiae necessitatibus!
+        Consequatur fugiat tempora vitae praesentium mollitia! Harum nemo autem
+        saepe impedit ipsa perspiciatis quaerat voluptatum dolor placeat
+        laborum? Labore maiores non voluptate vel corrupti autem fugiat culpa?
+      </p>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <table class="table table-hover">
+      <thead class="table-dark text-white">
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Gender</th>
+          <th>Email</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let user of usersData.results">
+          <td>{{ user.name.first }}</td>
+          <td>{{ user.name.last }}</td>
+          <td>{{ user.gender }}</td>
+          <td>{{ user.email }}</td>
+          <td>
+            <a routerLink="/Udetailsc/{{ user.email }}" class="btn btn-primary"
+              >Details</a
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

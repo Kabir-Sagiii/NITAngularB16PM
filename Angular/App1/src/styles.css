@@ -6,8 +6,15 @@
   background: linear-gradient(45deg, darkgreen, darkred);
 }
 .bg-dark {
-  background: linear-gradient(45deg, rgb(37, 19, 12), black);
+  /* background: linear-gradient(45deg, rgb(37, 19, 12), black); */
+  background: linear-gradient(45deg, black, darkred);
 }
 .bg-info {
   background: linear-gradient(45deg, rgb(12, 17, 37), black);
 }
+body {
+  margin: 0px;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

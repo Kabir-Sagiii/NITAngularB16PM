@@ -1,1 +1,30 @@
-<p>product-list works!</p>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col">
+      <h3 class="text-primary">All Product Details</h3>
+      <p class="text-info">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit veniam
+        eius doloribus aut tempora maxime voluptatem asperiores hic esse quo
+        omnis impedit nemo ratione earum accusantium aliquam iste, sequi ducimus
+        quam expedita assumenda? Enim voluptatum quia, deleniti earum molestiae,
+        reprehenderit voluptas ab minima eveniet, dignissimos fugit fugiat et
+        consectetur. Saepe.
+      </p>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col-4 mt-2" *ngFor="let product of allProductDetails">
+      <div class="card">
+        <div class="card-header">
+          <img [src]="product.image" class="img-fluid" />
+        </div>
+        <div class="card-body">
+          <p>{{ product.title }}</p>
+          <p>{{ product.category }}</p>
+          <p>{{ product.price | currency }}</p>
+          <button class="btn btn-primary px-3">Product Details</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
